@@ -1,5 +1,10 @@
 <template>
   <div>
+    <h1 class="text-3xl font-bold leading-none">{{ article.title }}</h1>
+    <p class="text-gray-600">
+      Updated At: {{ new Date(article.updatedAt).toLocaleString() }}
+    </p>
+    <hr class="my-4" />
     <article class="prose lg:prose-lg">
       <nuxt-content :document="article" />
     </article>
